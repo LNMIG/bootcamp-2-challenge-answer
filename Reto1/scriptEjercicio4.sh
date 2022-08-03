@@ -18,12 +18,11 @@ then
     palabra="Patrick Debois"
 fi
 
-cd
-mkdir /home/lnmig/Escritorio/bootcamp-2-challenge-answer/Reto1/foo3
-touch /home/lnmig/Escritorio/bootcamp-2-challenge-answer/Reto1/foo3/paginaCopiada.txt
+mkdir foo3
+touch foo3/paginaCopiada.txt
 
-curl --request GET $URL > /home/lnmig/Escritorio/bootcamp-2-challenge-answer/Reto1/foo3/paginaCopiada.txt -s
+curl --request GET $URL > foo3/paginaCopiada.txt -s
 
 
 echo "La palabra buscada aparece en la linea: " 
-grep --ignore-case --line-number "$palabra" /home/lnmig/Escritorio/bootcamp-2-challenge-answer/Reto1/foo3/paginaCopiada.txt | cut -d ':' -f 1
+grep --ignore-case --line-number "$palabra" foo3/paginaCopiada.txt | cut -d ':' -f 1
